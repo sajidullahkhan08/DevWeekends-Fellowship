@@ -1,0 +1,41 @@
+/* Centering layout */
+body {
+  margin: 0;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+#count {
+  font-size: 120px;
+  letter-spacing: -5px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 160px;
+  padding: 12px;
+  margin: 4px;
+  background: none;
+  border: 3px solid black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#reset {
+  border-color: red;
+  color: rgb(255, 75, 75);
+}
+
+button:active {
+  background-color: black;
+  color: white;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
