@@ -31,7 +31,7 @@ function fetchQuizQuestions() {
 const container = document.getElementById("quiz-container");
 
 container.innerHTML =
-  '<p style="text-align:center;">⏳ Loading Quiz Questions...</p>';
+  '<p style="text-align:center;">Loading Quiz Questions...</p>';
 
 fetchQuizQuestions()
   .then(function (data) {
