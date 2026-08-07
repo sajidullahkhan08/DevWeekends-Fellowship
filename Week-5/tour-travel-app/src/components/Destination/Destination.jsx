@@ -1,4 +1,4 @@
-import TourCard from "./TourCard";
+import TourCard from "../TripCard/TourCard";
 import "./Destinations.css";
 
 // PROPS DRILLING: App passes the whole 'tours' array here.

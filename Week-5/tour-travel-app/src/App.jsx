@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Destinations from "./components/Destinations";
 import Footer from "./components/Footer";
 import { toursData } from "./data/tours";
-import "./App.css";
 
 function App() {
   // State lives at the top (App level) and is drilled down.

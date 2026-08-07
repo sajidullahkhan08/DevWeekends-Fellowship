@@ -1,5 +1,5 @@
 // components/Navbar.jsx
-import BrandName from "./BrandName";
+import BrandName from "../BrandName";
 import "./Navbar.css";
 
 // PROPS DRILLING: App passes 'companyName' to Navbar,
