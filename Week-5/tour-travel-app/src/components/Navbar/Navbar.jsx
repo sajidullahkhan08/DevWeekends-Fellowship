@@ -1,28 +1,65 @@
-// components/Navbar.jsx
-import BrandName from "../BrandName";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-// PROPS DRILLING: App passes 'companyName' to Navbar,
-// and Navbar has to pass it down to BrandName.
-function Navbar({ companyName }) {
+function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
-      {/* Drilling the prop down one more level */}
-      <div className="logo">
-        <BrandName companyName={companyName} />
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          Travel<span>Agency</span>
+        </Link>
+
+        {/* Hamburger Icon for Mobile */}
+        <div className="menu-icon" onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+
+        {/* Nav Links */}
+        <ul className={isMenuOpen ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link to="/" className="nav-links" onClick={toggleMenu}>
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-links" onClick={toggleMenu}>
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/services" className="nav-links" onClick={toggleMenu}>
+              Services
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact" className="nav-links" onClick={toggleMenu}>
+              Contact
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/signup"
+              className="nav-links-mobile"
+              onClick={toggleMenu}
+            >
+              Sign Up
+            </Link>
+          </li>
+        </ul>
+
+        {/* Sign Up Button (Desktop only) */}
+        <button className="btn-signup">Sign Up</button>
       </div>
-      <ul className="nav-links">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#tours">Tours</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
     </nav>
   );
 }
+
 export default Navbar;
