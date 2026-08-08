@@ -1,20 +1,17 @@
-import "./TourCard.css";
+import "./TripCard.css";
 
-// This component is highly reusable. It doesn't know WHERE the data comes from,
-// it just knows it needs a 'tour' object to render.
-function TourCard({ tour }) {
+function TripCard({ img, heading, text }) {
   return (
-    <div className="tour-card">
-      <img src={tour.image} alt={tour.title} className="tour-image" />
-      <div className="tour-info">
-        <h3>{tour.title}</h3>
-        <p className="tour-location">📍 {tour.location}</p>
-        <div className="tour-footer">
-          <span className="tour-price">${tour.price}</span>
-          <button className="view-btn">View Details</button>
-        </div>
+    <div className="trip-card">
+      <div className="trip-image">
+        <img src={img} alt={heading} />
+      </div>
+      <div className="trip-info">
+        <h3>{heading}</h3>
+        <p>{text}</p>
       </div>
     </div>
   );
 }
-export default TourCard;
+
+export default TripCard;

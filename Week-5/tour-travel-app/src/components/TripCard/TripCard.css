@@ -1,42 +1,35 @@
-.tour-card {
-  background: white;
+.trip-card {
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.tour-card:hover {
-  transform: translateY(-5px);
+
+.trip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
-.tour-image {
+
+.trip-image img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
-.tour-info {
-  padding: 1rem;
+
+.trip-info {
+  padding: 20px;
 }
-.tour-location {
+
+.trip-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.trip-info p {
+  font-size: 1rem;
   color: #666;
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
-}
-.tour-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
-.tour-price {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #28a745;
-}
-.view-btn {
-  padding: 0.5rem 1rem;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  line-height: 1.5;
 }

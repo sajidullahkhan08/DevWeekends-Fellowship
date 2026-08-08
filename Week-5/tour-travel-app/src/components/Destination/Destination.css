@@ -1,18 +1,75 @@
-.destinations {
-  padding: 3rem 2rem;
-  text-align: center;
-  background: #f9f9f9;
+.destination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 50px;
 }
-.destinations h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+
+.destination.reverse {
+  flex-direction: row-reverse;
+}
+
+.destination-text {
+  flex: 1;
+}
+
+.destination-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: #333;
 }
-/* CSS Grid makes responsiveness incredibly easy! */
-.tours-grid {
+
+.destination-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.destination-images {
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dest-img-1 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  grid-column: span 2;
+}
+
+.dest-img-2 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .destination {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .destination.reverse {
+    flex-direction: column;
+  }
+
+  .destination-text h2 {
+    font-size: 2rem;
+  }
+
+  .destination-images {
+    grid-template-columns: 1fr;
+  }
+
+  .dest-img-1,
+  .dest-img-2 {
+    height: 250px;
+  }
 }

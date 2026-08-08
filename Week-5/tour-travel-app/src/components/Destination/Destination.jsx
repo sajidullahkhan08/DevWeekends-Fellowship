@@ -1,19 +1,18 @@
-import TourCard from "../TripCard/TourCard";
-import "./Destinations.css";
+import "./Destination.css";
 
-// PROPS DRILLING: App passes the whole 'tours' array here.
-// This component maps over it and passes individual 'tour' objects down to TourCard.
-function Destinations({ tours }) {
+function Destination({ heading, text, img1, img2, reverse }) {
   return (
-    <section className="destinations" id="tours">
-      <h2>Popular Destinations</h2>
-      <div className="tours-grid">
-        {tours.map((tour) => (
-          // Drilling the individual tour object down to TourCard
-          <TourCard key={tour.id} tour={tour} />
-        ))}
+    <div className={`destination ${reverse ? "reverse" : ""}`}>
+      <div className="destination-text">
+        <h2>{heading}</h2>
+        <p>{text}</p>
       </div>
-    </section>
+      <div className="destination-images">
+        <img src={img1} alt="Destination 1" className="dest-img-1" />
+        <img src={img2} alt="Destination 2" className="dest-img-2" />
+      </div>
+    </div>
   );
 }
-export default Destinations;
+
+export default Destination;
