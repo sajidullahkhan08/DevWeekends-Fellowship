@@ -44,6 +44,7 @@ function Navbar() {
               Contact
             </Link>
           </li>
+          {/* Sign Up Link (Mobile only), Must not be visible on Desktop */}
           <li className="nav-item">
             <Link
               to="/signup"

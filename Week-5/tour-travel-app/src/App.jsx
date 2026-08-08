@@ -1,28 +1,24 @@
-import { useState } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Destinations from "./components/Destinations";
-import Footer from "./components/Footer";
-import { toursData } from "./data/tours";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import "./App.css";
 
 function App() {
-  // State lives at the top (App level) and is drilled down.
-  const [companyName] = useState("Wanderlust Travels");
-  const [tours] = useState(toursData);
-
   return (
-    <div className="app">
-      {/* Drilling companyName down to Navbar -> BrandName */}
-      <Navbar companyName={companyName} />
-
-      <Hero />
-
-      {/* Drilling tours array down to Destinations -> TourCard */}
-      <Destinations tours={tours} />
-
-      {/* Drilling companyName down to Footer */}
-      <Footer companyName={companyName} />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
