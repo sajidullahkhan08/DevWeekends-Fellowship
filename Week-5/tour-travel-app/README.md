@@ -1,16 +1,27 @@
-# React + Vite
+# Week 5: Tour & Travel Website 🌍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my Week 5 project for the DevWeekends Fellowship. I built a simple, responsive travel agency website using React.
 
-Currently, two official plugins are available:
+**Live Demo:** https://tour-travel-app-blue.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
 
-## React Compiler
+- **Home Page:** Shows a welcome section, popular destinations, and recent trips.
+- **About Page:** Tells the story of the travel agency.
+- **Services Page:** Shows the trips and services we offer.
+- **Contact Page:** Has a form where users can send a message.
+- **Mobile Friendly:** The navigation menu turns into a sliding hamburger menu on mobile phones.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What I used
 
-## Expanding the ESLint configuration
+- **React.js** (for building the website parts)
+- **React Router** (to move between pages without the screen refreshing)
+- **CSS** (to make it look nice and work on all screen sizes)
+- **Vercel** (to put the website live on the internet)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I learned
+
+- How to break a big website into small, reusable React "components".
+- How to pass data between different parts of the website using "props".
+- How to set up multiple pages using React Router.
+- How to deploy a React project to Vercel.
