@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.accordion-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accordion-container > button {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.accordion-container > button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  background: #1a1a2e;
+  border: 1px solid #2d2d4e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.accordion-item:hover {
+  border-color: #7c3aed;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.accordion-title:hover {
+  background: #22224a;
+}
+
+.accordion-title h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c4b5fd;
+}
+
+.accordion-title span {
+  font-size: 1.4rem;
+  color: #7c3aed;
+  font-weight: 300;
+}
+
+.accordion-content {
+  padding: 16px 22px 20px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #a0aec0;
+  border-top: 1px solid #2d2d4e;
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
