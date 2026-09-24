@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-fundamentals",
+  "version": "1.0.0",
+  "description": "Node.js core concepts: event loop, modules, fs, streams, events, and HTTP server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "modules": "node 01-modules-demo.js",
+    "fs": "node 02-filesystem-demo.js",
+    "events": "node 03-events-demo.js",
+    "streams": "node 04-streams-demo.js"
+  },
+  "keywords": ["nodejs", "http", "fs", "events", "streams"],
+  "author": "Sajidullah Khan",
+  "license": "MIT"
+}
