@@ -1,4 +1,4 @@
-# Node.js Event Loop Explained 🔄
+# Node.js Event Loop Explained
 
 ## What is the Event Loop?
 The event loop is what allows Node.js to perform **non-blocking I/O operations** 
@@ -130,14 +130,14 @@ console.log('Still running!');
 
 ### Blocking the Event Loop
 ```javascript
-// ❌ BAD: CPU-intensive task blocks everything
+// BAD: CPU-intensive task blocks everything
 function heavyComputation() {
     for (let i = 0; i < 1000000000; i++) {
         // This blocks the event loop!
     }
 }
 
-// ✅ GOOD: Offload to worker threads or break into chunks
+// GOOD: Offload to worker threads or break into chunks
 ```
 
 ### setTimeout(fn, 0) Doesn't Run Immediately
@@ -150,6 +150,7 @@ console.log('End');
 // setTimeout is queued in the timers phase, not executed immediately
 ```
 
-## Further Reading
-- [Node.js Event Loop Guide](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
-- [Philip Roberts: What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+### Source of Notes
+- Gemini 3 Pro
+- ChatGPT
+- https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/

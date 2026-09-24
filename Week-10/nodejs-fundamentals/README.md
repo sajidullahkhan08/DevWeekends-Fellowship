@@ -1,9 +1,5 @@
 # Week 10: Node.js Fundamentals
 
-A comprehensive exploration of Node.js core concepts, built without any frameworks.
-
-## What This Project Covers
-
 1. **CommonJS Modules** - `require()` and `module.exports`
 2. **File System (fs)** - Synchronous, asynchronous, and promise-based file operations
 3. **Events Module** - EventEmitter and custom event-driven architecture
@@ -11,14 +7,13 @@ A comprehensive exploration of Node.js core concepts, built without any framewor
 5. **HTTP Server** - Building a REST API from scratch using the `http` module
 6. **Event Loop** - Understanding Node.js's non-blocking architecture
 
-## Getting Started
 
-### Install Dependencies
+### Installing Dependencies
 ```bash
 npm install
 ```
 
-### Run Demos
+### Running Demos
 ```bash
 # Modules demo
 npm run modules
@@ -40,42 +35,7 @@ npm start
 npm run dev
 ```
 
-## API Endpoints
-
-Once the server is running at `http://localhost:3000`:
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/` | HTML home page |
-| GET | `/api/info` | Server information (JSON) |
-| GET | `/api/files` | List all files (JSON) |
-| GET | `/api/files/:filename` | Read a specific file (JSON) |
-| POST | `/api/files` | Create a new file (JSON body) |
-
-### Example: Create a File
-```bash
-curl -X POST http://localhost:3000/api/files \
-  -H "Content-Type: application/json" \
-  -d '{"filename":"hello.txt","content":"Hello World!"}'
-```
-
-## Project Structure
-
-```
-Week-10/
-├── 01-modules-demo.js       # CommonJS modules
-├── 02-filesystem-demo.js    # fs module operations
-├── 03-events-demo.js        # EventEmitter
-├── 04-streams-demo.js       # Streams and pipe()
-├── server.js                # HTTP server (main deliverable)
-├── event-loop-notes.md      # Event loop documentation
-├── modules/
-│   ├── math-utils.js
-│   └── string-utils.js
-└── files/                   # Created by demos
-```
-
-## Key Concepts Learned
+## Concepts Learned
 
 ### Event Loop
 - Node.js is single-threaded but uses the event loop for concurrency
@@ -102,8 +62,3 @@ A complete HTTP server that:
 - Demonstrates routing without Express
 - Shows how frameworks like Express work under the hood
 
-## Resources
-
-- [Node.js Documentation](https://nodejs.org/docs/latest/api/)
-- [Node.js Event Loop Guide](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
-- [Understanding Node.js](https://nodejs.org/en/docs/guides/)
